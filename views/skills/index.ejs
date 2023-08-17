@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Skills</title>
+    <title><%= skill %></title>
 </head>
 <body>
     <a href="/">Home</a>
-    <h1>Skills</h1>
+    <h1>Skills Index</h1>
     <ul>
-        <% skills.forEach(function(s) {%>
-            <li>
-                <a href="/skills/<%=s.id%>"> <%= s.skill %> </a>
-                -
-                <%= s.level %>
-            </li>
+        <% skills.forEach(function(skill) { %>
+                <a href="/skills/<%= skill.id %>"> 
+                    <li><%= skill.skill %> 
+                        -
+                        <%= skill.level %>
+                    </li>
+                </a>
         <% }) %>
     </ul>
     <a href="/skills/new">Add Skill</a>
