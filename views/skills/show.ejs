@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title><%= skill %></title>
-</head>
-<body>
+<%- include('../partials/header') %>
     <h1>Skill Show Page</h1>
     <p>Skill: <%=skill.skill %> </p>
     <p>Level: <%= skill.level %> </p>
     <a href="/skills/<%= skill.id %>/edit">
         Edit this Skill
     </a>
-</body>
-</html>
+<%- include('../partials/footer') %>
